@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PokefinderService } from '../pokefinder.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Pokemon } from '../pokemon';
 
 @Component({
   selector: 'app-pokedisplay',
@@ -10,7 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class PokedisplayComponent implements OnInit {
 
   public pokemon: number = 1;
-
+  currPoke: Pokemon;
   constructor(private route: ActivatedRoute,
     private router: Router,
     private pokeService: PokefinderService) { 
@@ -25,7 +26,12 @@ export class PokedisplayComponent implements OnInit {
     console.log(inea);
     this.pokemon = inea; 
 
-  
+    this.pokeService.getPokemon(inea).subscribe(
+      (resp) => {
+        this.currPoke =resp;
+        console.log(this.currPoke);
+      }
+    );
 
   }
 }

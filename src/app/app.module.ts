@@ -9,10 +9,10 @@ import { HelloComponent } from './hello.component';
 import { BoxComponent } from './box/box.component';
 import { Gen1Component } from './gen1/gen1.component';
 import { PokefinderService } from './pokefinder.service';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, AppRoutingModule ],
+  imports:      [ BrowserModule, FormsModule, AppRoutingModule, HttpClientModule ],
   declarations: [ AppComponent, HelloComponent, BoxComponent, Gen1Component, routingComponents ],
   bootstrap:    [ AppComponent ],
   providers: [PokefinderService]

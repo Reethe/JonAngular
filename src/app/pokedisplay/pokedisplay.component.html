@@ -5,7 +5,14 @@
 </nav>
 
 <p>
- pokedisplay works!
+ pokedisplay doesn't really work right now sorry Andrew. You shut up.
  {{pokemon}}
-</p>
+ {{currPoke.name}}
+</p><br>
+<ul>
+  <li *ngFor="let stat of currPoke.stats">
+    {{stat.stat.name}} : {{stat.base_stat}}
+  </li>
+</ul>
+
  <!--<router-outlet></router-outlet>-->
