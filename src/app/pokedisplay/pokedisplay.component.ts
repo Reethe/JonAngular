@@ -19,9 +19,21 @@ export class PokedisplayComponent implements OnInit {
   ngOnInit() {
     const id = +this.route.snapshot.paramMap.get('poke');
     
-    this.pokemon= id;
+    //this.pokemon= id;
     console.log(id);
     //this.pokemon = id;
   }
 
+  onClickMe(){
+    console.log(this.router.url);
+    const id = this.router.url;
+
+    //const regex = /(?<=\/)\d+/;
+    const result = id.match(/(?<=\/)\d+/);
+    //const id = +this.route.snapshot.paramMap.get('poke');
+
+    console.log(result[0]);
+    this.pokemon = +result[0]; 
+    console.log(this.router.url);
+  }
 }
