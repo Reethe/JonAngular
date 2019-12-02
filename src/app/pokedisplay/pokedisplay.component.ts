@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { PokefinderService } from '../pokefinder.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -12,22 +12,20 @@ export class PokedisplayComponent implements OnInit {
   public pokemon: number = 1;
 
   constructor(private route: ActivatedRoute,
-    private router: Router) { 
+    private router: Router,
+    private pokeService: PokefinderService) { 
     
   }
 
   ngOnInit() {
-    const id = +this.route.snapshot.paramMap.get('poke');
     
-    //this.pokemon= id;
-    console.log(id);
-    //this.pokemon = id;
   }
 
   onClickMe(inea: number){
     console.log(inea);
     this.pokemon = inea; 
 
-    
+  
+
   }
 }
