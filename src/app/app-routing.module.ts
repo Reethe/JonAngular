@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { PokedisplayComponent } from './pokedisplay/pokedisplay.component';
 
 const routes: Routes = [
-  { path: 'pokedisplay', component: pokedisplay}
+  { path: 'pokedisplay', component: PokedisplayComponent}
 ];
 
 @NgModule({
