@@ -24,16 +24,10 @@ export class PokedisplayComponent implements OnInit {
     //this.pokemon = id;
   }
 
-  onClickMe(){
-    console.log(this.router.url);
-    const id = this.router.url;
+  onClickMe(inea: number){
+    console.log(inea);
+    this.pokemon = inea; 
 
-    //const regex = /(?<=\/)\d+/;
-    const result = id.match(/(?<=\/)\d+/);
-    //const id = +this.route.snapshot.paramMap.get('poke');
-
-    console.log(result[0]);
-    this.pokemon = +result[0]; 
-    console.log(this.router.url);
+    
   }
 }
