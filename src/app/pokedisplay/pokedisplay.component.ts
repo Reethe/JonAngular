@@ -10,7 +10,7 @@ import { Pokemon } from '../pokemon';
 })
 export class PokedisplayComponent implements OnInit {
 
-  public pokemon: number = 1;
+  public pokemon: any = 1;
   currPoke: Pokemon;
   constructor(private route: ActivatedRoute,
     private router: Router,
@@ -22,7 +22,7 @@ export class PokedisplayComponent implements OnInit {
     
   }
 
-  onClickMe(inea: number){
+  onClickMe(inea: any){
     console.log(inea);
     this.pokemon = inea; 
 

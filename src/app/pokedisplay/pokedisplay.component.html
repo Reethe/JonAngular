@@ -4,12 +4,12 @@
   <a routerLink="/pokedisplay/322" routerLinkActive="active" (click)="onClickMe(322)" >Gen "2"</a>
 </nav>
 
-<p>
+<p *ngIf="currPoke">
  pokedisplay doesn't really work right now sorry Andrew. You shut up.
  {{pokemon}}
  {{currPoke.name}}
 </p><br>
-<ul>
+<ul *ngIf="currPoke">
   <li *ngFor="let stat of currPoke.stats">
     {{stat.stat.name}} : {{stat.base_stat}}
   </li>
